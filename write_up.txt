@@ -1,0 +1,62 @@
+A. Assumptions
+
+As the training data consists of only two classes, namely, Persons and Cars, I have assumed that the model in being built only 
+for detection of these two object categories and thus, the model wont be able to detect other object categories. I have also 
+assumed that we do not need real-time object detection and localization, thus, I haven't took any such extra care for maing it 
+work into real-time. As the given data consists of training images, I have assumed that we cannot use any extra training data, 
+thus, haven't used any other data or haven't increased the size &/or variety of dataset by performing image augmentation. Last 
+assumption I get is the training dataset consists day images more so it model trained on this data will be able to detect objects
+in mostly day lights (another reason for not taking this for real-time detection). 
+
+B. Approach
+
+I use state-of-the-art YoloV5 algorithm for object detections. I chose YoloV5 because it is build on PyTorch framework that's it
+is much fatser than its preious versions. And in YoloV5 contains wandb dependecy which is not present in TFod architecture. wandb 
+provides many inbuilt features for visualize model training and many more. After training the model file is comparetively smaller 
+than its previoes versions. YoloV5 is more easy to train and inference as compared to TFod and its preious versions.
+
+The dataset contains 2239 images with 6 features/columns, namely,
+
+1.  filename_name: name of the image under consideration
+2.  width: width in pixels of the image
+3.  height: height in pixels of the image
+4.  id: Unique id of every image
+5.  license
+6.  file_path: Path of each image
+
+The dataset contains 16772 annotations with 8 features/columns, namely,
+
+1.  category_id: category of anotation, Person and Car, two classes
+2.  image_id: corresponding image of the annotation under consideration
+3.  segmentation
+4.  iscrowd
+5.  bbox: bounding box co-ordinates, namely, top left x position, top left y position, width, height
+6.  area: area of the bbox
+7.  id: Unique id of each annotation
+8.  license
+
+Steps for training YoloV5
+
+1.  The dataset provided by EagleView is in CoCo format. So, I convert the annoatations to yolo format (*.txt)
+2.  For convert annotation I used prepare_annotations.py file. From this file I get annoatations in desired format
+3.  Now, I store images and annoatations in single directory ans then I run split_image_data.py scrpt for spliting data in
+    training and validation data
+4.  For training, I use Google Colaboratry. 
+5.  First of all, clone the latest code from yolov5 repo and upload dataset
+6.  Now go to yolov5 directory
+7.  run ==> python train.py --img 640 --batch 32 --epochs 100 --data "yaml-file-path" --weights yolov5s.pt --device 0
+    device 0 means gpu and for cpu don't pass device arguement
+
+Steps for inferencing
+
+1. we just need to run one command ==> python detect.py --source "file path" 
+    --weights "lates trained weights path"
+
+C. Metrics
+
+You can see all matrics related to model in metrics.png file
+
+D. Results
+
+Sample result Images with Bounding Boxes & Confidence Score.
+
