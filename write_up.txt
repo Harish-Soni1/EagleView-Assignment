@@ -1,3 +1,7 @@
+For This task I am using Yolov5
+
+Link to download the dataset: https://evp-ml-data.s3.us-east-2.amazonaws.com/ml-interview/openimages-personcar/trainval.tar.gz
+
 A. Assumptions
 
 As the training data consists of only two classes, namely, Persons and Cars, I have assumed that the model in being built only 
