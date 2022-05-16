@@ -2,7 +2,7 @@
 
 ## A. Created a new repository 'EagleView-Assignment' and using it for this task
 
-I have created a new repository on GitHub named 'EagleView_COCO-OD' specifically for this task which consists of all the code along with the detailed write-up as a part of the solution suite.
+I have created a new repository on GitHub named 'EagleView-Assignment' specifically for this task which consists of all the code along with the detailed write-up as a part of the solution suite.
 
 ## B. Data Directory Structure
 
