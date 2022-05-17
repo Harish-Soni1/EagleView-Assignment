@@ -59,5 +59,5 @@ Develop and train a model on this dataset to detect person and cars in an image.
 
 ## F. Report
 Please checkout 
-* Documentation ------> [Documentation](https://github.com/Harish-Soni1/EagleView-Assignment/blob/main/write_up.txt "Click Here")
+* Documentation ------> [Click Here](https://github.com/Harish-Soni1/EagleView-Assignment/blob/main/write_up.txt "Click Here")
 
