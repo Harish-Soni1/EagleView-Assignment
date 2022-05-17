@@ -1,4 +1,4 @@
-For This task I am using Yolov5
+For This task I used Yolov5
 
 Link to download the dataset: https://evp-ml-data.s3.us-east-2.amazonaws.com/ml-interview/openimages-personcar/trainval.tar.gz
 
